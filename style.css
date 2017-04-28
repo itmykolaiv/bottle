@@ -1,0 +1,73 @@
+.bottle {
+    float: left;
+    height: 400px;
+    position: relative;
+}
+.glass {
+    float: left;
+    height: 400px;
+    position: relative;
+    transition-duration: .4s;
+}
+.glass path:nth-child(2) {
+    opacity: 0;
+    fill: blue;
+    transition-duration: 2.4s;
+}
+.bottle path:nth-child(2) {
+    fill: blue;
+    transition-duration: 2.4s;
+}
+.glass.rotated {
+    transform: rotateZ(180deg);
+}
+.cap {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: black;
+    border-radius: 5px;
+    left: 155px;
+    transition-duration: .4s;
+}
+
+.cap.open {
+    opacity: 0;
+}
+
+@keyframes bottle-anim {
+    0%   {
+        transform: scale(1,1);
+    }
+    50%  {
+        transform: rotateZ(45deg) scale(.5,.5);
+    }
+    100% {
+        transform: rotateZ(0deg) scale(1,1);
+    }
+}
+
+@keyframes glass-anim {
+    0%   {
+        transform: scale(1,1);
+        left: 0px;
+    }
+    50%  {
+        transform: rotateZ(-45deg) scale(.3,.3);
+        left: -240px;
+    }
+    100% {
+        transform: rotateZ(0deg) scale(1,1);
+        left: 0px;
+    }
+}
+
+.bottle.pour {
+    animation-name: bottle-anim;
+    animation-duration: 4s;
+}
+
+.glass.fill {
+    animation-name: glass-anim;
+    animation-duration: 4s;
+}
