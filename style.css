@@ -1,7 +1,20 @@
+body {
+    min-width: 790px;
+    background-image: url(img/coffee.jpg);
+    background-size: cover;
+}
 .bottle {
     float: left;
     height: 400px;
     position: relative;
+}
+
+h1 {
+    color: #ccc;
+    margin-bottom: 120px;    
+}
+path {
+    fill: #ccc;
 }
 .glass {
     float: left;
@@ -25,7 +38,7 @@
     position: absolute;
     width: 60px;
     height: 40px;
-    background: black;
+    background: #ccc;
     border-radius: 5px;
     left: 155px;
     transition-duration: .4s;
